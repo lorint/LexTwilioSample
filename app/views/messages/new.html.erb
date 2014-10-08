@@ -1,0 +1,26 @@
+<%= form_for(@message) do |f| %>
+  <ul>
+    <% @message.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
